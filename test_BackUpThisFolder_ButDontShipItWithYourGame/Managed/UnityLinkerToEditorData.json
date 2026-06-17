@@ -57,9 +57,35 @@
             "icon": null
           },
           {
+            "name": "Behaviour",
+            "scenes": [
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "IConstraint",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
             "name": "Motion",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "RotationConstraint",
+            "scenes": [
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -96,7 +122,11 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -118,14 +148,20 @@
           },
           {
             "name": "AudioResource",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioSource",
             "scenes": [
-              "Assets/Scenes/EscapeRoom1.unity"
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -178,7 +214,7 @@
           {
             "name": "ComputeShader",
             "scenes": [
-              "Assets/Scenes/EscapeRoom1.unity"
+              "Assets/Scenes/GameLobby.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -459,7 +495,7 @@
           {
             "name": "RenderTexture",
             "scenes": [
-              "Assets/Scenes/EscapeRoom1.unity"
+              "Assets/Scenes/GameLobby.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1547,6 +1583,7 @@
             "name": "Font",
             "scenes": [
               "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
               "Assets/Scenes/GameLobby.unity"
             ],
             "dependencyType": 0,
@@ -1599,7 +1636,11 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/EscapeRoom1.unity",
+              "Assets/Scenes/EscapeRoom2.unity",
+              "Assets/Scenes/GameLobby.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
