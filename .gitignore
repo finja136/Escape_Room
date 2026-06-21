@@ -3,3 +3,4 @@ Temp/
 Logs/
 UserSettings/
 *.utmp
+.vs/
