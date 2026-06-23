@@ -5,6 +5,13 @@ public class EnergyPuzzleManager : MonoBehaviour
     [SerializeField] private EnergySlot[] slots;
     [SerializeField] private DoorController door;
 
+    [ContextMenu("Force Solve Puzzle")]
+    public void ForceSolvePuzzle()
+    {
+        Debug.Log("PUZZLE FORCED COMPLETE");
+        door.OpenDoor();
+    }
+
     public void CheckPuzzle()
     {
         foreach (EnergySlot slot in slots)

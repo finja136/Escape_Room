@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+
     private bool opened = false;
 
+ 
+
     public void OpenDoor()
-    {
-        if (opened)
-            return;
+    {   
+        if (opened) return;
 
         opened = true;
-
-        transform.position += Vector3.up * 3f;
+        animator.SetTrigger("Open");
     }
 }
