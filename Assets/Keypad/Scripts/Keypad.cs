@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace NavKeypad
 {
@@ -50,15 +51,53 @@ namespace NavKeypad
 
         private string currentInput;
         private bool displayingResult = false;
+        private bool isLocked = true;
+        private XRSimpleInteractable[] buttons;
+
         
 
         private void Awake()
         {
+            buttons = GetComponentsInChildren<XRSimpleInteractable>();
+            SetButtonsLocked(true);
             ClearInput();
             panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
+            SetLockedVisual(true);
             for (int i = 0; i < indicators.Length; i++)
             {
                 indicators[i].material = offMaterial;
+            }
+
+        }
+
+        private void SetButtonsLocked(bool locked)
+        {
+            foreach (var b in buttons)
+            {
+                b.enabled = !locked;
+            }
+        }
+
+        public void UnlockKeypad()
+        {
+            isLocked = false;
+
+            ClearInput();
+            SetLockedVisual(isLocked);
+            SetButtonsLocked(isLocked);
+        }
+
+        private void SetLockedVisual(bool locked)
+        {
+            if (locked)
+            {
+                keypadDisplayText.text = "";
+                panelMesh.material.SetVector("_EmissionColor", Color.black);
+            }
+            else
+            {
+                panelMesh.material.SetVector("_EmissionColor", screenNormalColor * screenIntensity);
+                puzzleManager.ShowPuzzle(currentStage);
             }
         }
 
@@ -66,6 +105,9 @@ namespace NavKeypad
         //Gets value from pressedbutton
         public void AddInput(string input)
         {
+            if (isLocked)
+                return;
+
             audioSource.PlayOneShot(buttonClickedSfx);
 
             if (displayingResult)

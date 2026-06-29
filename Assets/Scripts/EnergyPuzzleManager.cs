@@ -1,15 +1,17 @@
 using UnityEngine;
+using NavKeypad;
 
 public class EnergyPuzzleManager : MonoBehaviour
 {
     [SerializeField] private EnergySlot[] slots;
     [SerializeField] private DoorController door;
+    [SerializeField] private Keypad keypad;
 
     [ContextMenu("Force Solve Puzzle")]
     public void ForceSolvePuzzle()
     {
         Debug.Log("PUZZLE FORCED COMPLETE");
-        door.OpenDoor();
+        keypad.UnlockKeypad();
     }
 
     public void CheckPuzzle()
@@ -34,6 +36,6 @@ public class EnergyPuzzleManager : MonoBehaviour
                 return;
         }
 
-        door.OpenDoor();
+        keypad.UnlockKeypad();
     }
 }

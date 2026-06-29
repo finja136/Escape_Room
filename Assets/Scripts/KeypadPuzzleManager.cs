@@ -8,14 +8,19 @@ public class KeypadPuzzleManager : MonoBehaviour
 
     private void Start()
     {
-        ShowPuzzle(0);
+        ShowPuzzle(3);
     }
 
     public void ShowPuzzle(int index)
     {
         if (index < 0 || index >= puzzleSprites.Length)
             return;
-
-        puzzleImage.sprite = puzzleSprites[index];
+        if (index != 3)
+        {
+            puzzleImage.color = new Color(1f,1f,1f);
+            puzzleImage.sprite = puzzleSprites[index];
+        }
+        else
+            puzzleImage.sprite = puzzleSprites[index];
     }
 }
