@@ -56,6 +56,7 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
+    <Compile Include="Assets\Scripts\BinaryEnterButton.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Keypad\Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\SceneLoaderWithTimer.cs" />
@@ -73,10 +74,12 @@
     <Compile Include="Assets\Scripts\EnergySlot.cs" />
     <Compile Include="Assets\Keypad\Scripts\KeypadInteractionFPV.cs" />
     <Compile Include="Assets\Scripts\ReactorCountdown.cs" />
+    <Compile Include="Assets\Scripts\BinaryButton.cs" />
     <Compile Include="Assets\Scripts\MonitorSwitcher.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\Callout.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
     <Compile Include="Assets\Scripts\EnergyPuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\ReactorPuzzleManager.cs" />
     <Compile Include="Assets\Barking_Dog\Common Scripts\Turn_Move.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\StepManager.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\MouseLook.cs" />
