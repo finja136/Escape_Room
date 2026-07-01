@@ -12,11 +12,5 @@ public class SceneLoaderWithTimer : MonoBehaviour
         SceneManager.LoadScene("EscapeRoom1");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player") || other.GetComponentInChildren<Camera>() != null)
-        {
-            StartGame();
-        }
-    }
+
 }
