@@ -1,14 +1,31 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class BinaryEnterButton : MonoBehaviour
 {
     [SerializeField] private ReactorPuzzleManager manager;
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
 
-    private void Awake()
+    [Header("Visual")]
+    [SerializeField] private Transform buttonTop;
+    [SerializeField] private float pressedY = 0.01f;
+    [SerializeField] private float releasedY = 0.02f;
+    [SerializeField] private float resetDelay = 0.1f;
+
+    public void Press()
     {
-        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
-        interactable.selectEntered.AddListener(_ => manager.CommitValue());
+        // visual press
+        Vector3 pos = buttonTop.localPosition;
+        pos.y = pressedY;
+        buttonTop.localPosition = pos;
+
+        manager.CommitValue();
+
+        Invoke(nameof(Release), resetDelay);
+    }
+
+    private void Release()
+    {
+        Vector3 pos = buttonTop.localPosition;
+        pos.y = releasedY;
+        buttonTop.localPosition = pos;
     }
 }

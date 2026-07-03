@@ -1,79 +1,144 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ReactorPuzzleManager : MonoBehaviour
 {
-    [Header("Puzzle Display (Sprites)")]
-    [SerializeField] private Image puzzleDisplay;
-    [SerializeField] private Sprite[] puzzleSprites; // 3
+    [Header("Puzzle Progress")]
+    [SerializeField] private int playerState = 0; // 0–2 (3 Unterrätsel)
 
-    [Header("Binary Grid (16 cells)")]
+    [Header("Puzzle Display")]
+    [SerializeField] private Sprite[] puzzleSprites;
+    [SerializeField] private UnityEngine.UI.Image puzzleDisplay;
+
+    [SerializeField] private BinaryButton[] bitButtons;
+
+    [Header("Solutions [3 puzzles][4 numbers]")]
+    [SerializeField] private int[] solutionPuzzle1 = new int[4];
+    [SerializeField] private int[] solutionPuzzle2 = new int[4];
+    [SerializeField] private int[] solutionPuzzle3 = new int[4];
+
+    [Header("Display Cells (16 total = 4x4)")]
     [SerializeField] private Renderer[] cells;
 
-    [Header("Materials")]
+    [Header("Materials (Bit Colors)")]
     [SerializeField] private Material offMaterial;
-    [SerializeField] private Material activeMaterial;
+    [SerializeField] private Material bit1Material; // 1
+    [SerializeField] private Material bit2Material; // 2
+    [SerializeField] private Material bit4Material; // 4
+    [SerializeField] private Material bit8Material; // 8
 
-    [Header("Solutions (3 puzzles × 4 numbers)")]
-    [SerializeField]
-    private int[][] solutionCodes =
-    {
-        new int[4],
-        new int[4],
-        new int[4]
-    };
-
-    [SerializeField] private int playerState = 0;
-
-    private int currentDigit = 0;
+    [Header("Bit State")]
     private int currentValue = 0;
-
+    private int currentDigit = 0;
     private int[] enteredValues = new int[4];
 
-    private void Awake()
+    [Header("Feedback")]
+    [SerializeField] private Image feedbackPanel;
+    [SerializeField] private Color correctColor = Color.green;
+    [SerializeField] private Color wrongColor = Color.red;
+    [SerializeField] private float feedbackTime = 0.5f;
+
+    [Header("Scene Transition")]
+    [SerializeField] private string nextSceneName;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip correctClip;
+    [SerializeField] private AudioClip wrongClip;
+    [SerializeField] private AudioClip buttonClickClip; 
+    // =========================
+    // INIT
+    // =========================
+
+    private void Start()
     {
         LoadPuzzle();
-        ClearGrid();
+        ClearDisplay();
     }
 
-    // =========================
-    // LOAD PUZZLE STEP
-    // =========================
+    private int[] GetSolution(int index)
+    {
+        switch (index)
+        {
+            case 0: return solutionPuzzle1;
+            case 1: return solutionPuzzle2;
+            case 2: return solutionPuzzle3;
+            default: return solutionPuzzle1;
+        }
+    }
 
     private void LoadPuzzle()
     {
         if (playerState < puzzleSprites.Length)
             puzzleDisplay.sprite = puzzleSprites[playerState];
 
-        currentDigit = 0;
         currentValue = 0;
+        currentDigit = 0;
         enteredValues = new int[4];
     }
 
     // =========================
-    // BIT TOGGLE (4 Buttons)
+    // BIT INPUT (called by buttons)
     // =========================
 
     public void ToggleBit(int bit)
     {
-        currentValue ^= bit;
-        UpdateCurrentDisplay();
+        audioSource.PlayOneShot(buttonClickClip);
+        currentValue ^= bit; // toggle
+
+        UpdateDisplayLive();
     }
 
     // =========================
     // LIVE DISPLAY UPDATE
     // =========================
 
-    private void UpdateCurrentDisplay()
+    private void UpdateDisplayLive()
     {
         for (int bit = 0; bit < 4; bit++)
         {
-            bool active = (currentValue & (1 << bit)) != 0;
+            int mask = 1 << bit;
+            bool active = (currentValue & mask) != 0;
 
             int index = currentDigit * 4 + bit;
 
-            cells[index].material = active ? activeMaterial : offMaterial;
+            if (active)
+            {
+                cells[index].material = GetMaterialForBit(mask);
+            }
+            else
+            {
+                cells[index].material = offMaterial;
+            }
+        }
+    }
+
+    private IEnumerator ShowFeedback(bool correct)
+    {
+        if (feedbackPanel != null)
+        {
+            feedbackPanel.color = correct ? correctColor : wrongColor;
+            feedbackPanel.gameObject.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(feedbackTime);
+
+        if (feedbackPanel != null)
+            feedbackPanel.gameObject.SetActive(false);
+    }
+
+    private Material GetMaterialForBit(int bit)
+    {
+        switch (bit)
+        {
+            case 1: return bit1Material;
+            case 2: return bit2Material;
+            case 4: return bit4Material;
+            case 8: return bit8Material;
+            default: return offMaterial;
         }
     }
 
@@ -82,7 +147,8 @@ public class ReactorPuzzleManager : MonoBehaviour
     // =========================
 
     public void CommitValue()
-    {
+    {   
+        audioSource.PlayOneShot(buttonClickClip);
         enteredValues[currentDigit] = currentValue;
 
         currentDigit++;
@@ -94,12 +160,12 @@ public class ReactorPuzzleManager : MonoBehaviour
         }
         else
         {
-            UpdateCurrentDisplay();
+            UpdateDisplayLive();
         }
     }
 
     // =========================
-    // CHECK
+    // CHECK PUZZLE
     // =========================
 
     private void CheckPuzzle()
@@ -108,19 +174,30 @@ public class ReactorPuzzleManager : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            if (enteredValues[i] != solutionCodes[playerState][i])
+            if (enteredValues[i] != GetSolution(playerState)[i])
             {
                 correct = false;
                 break;
             }
         }
 
+        StartCoroutine(HandleResult(correct));
+    }
+
+    private IEnumerator HandleResult(bool correct)
+    {
+        StartCoroutine(ShowFeedback(correct));
+
+        yield return new WaitForSeconds(feedbackTime);
+
         if (correct)
         {
-            AdvanceState();
+            audioSource.PlayOneShot(correctClip);
+            AdvancePuzzle();
         }
         else
         {
+            audioSource.PlayOneShot(wrongClip);
             ResetCurrentPuzzle();
         }
     }
@@ -129,28 +206,38 @@ public class ReactorPuzzleManager : MonoBehaviour
     // PROGRESSION
     // =========================
 
-    private void AdvanceState()
+    private void AdvancePuzzle()
     {
         playerState++;
 
         if (playerState >= puzzleSprites.Length)
         {
-            PuzzleComplete();
+            FinishGame();
             return;
         }
 
         LoadPuzzle();
-        ClearGrid();
-    }
-
-    private void PuzzleComplete()
-    {
-        Debug.Log("Reactor Puzzle Completed");
-        // Tür, Event etc.
+        ClearDisplay();
     }
 
     // =========================
-    // RESET CURRENT PUZZLE
+    // FINISH → SCENE CHANGE
+    // =========================
+
+    private void FinishGame()
+    {
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogWarning("No scene assigned!");
+        }
+    }
+
+    // =========================
+    // RESET
     // =========================
 
     private void ResetCurrentPuzzle()
@@ -159,21 +246,14 @@ public class ReactorPuzzleManager : MonoBehaviour
         currentValue = 0;
         enteredValues = new int[4];
 
-        ClearGrid();
+        ClearDisplay();
     }
 
-    private void ClearGrid()
+    private void ClearDisplay()
     {
         for (int i = 0; i < cells.Length; i++)
+        {
             cells[i].material = offMaterial;
-    }
-
-    // =========================
-    // PUBLIC ACCESS (for future hints)
-    // =========================
-
-    public int GetPlayerState()
-    {
-        return playerState;
+        }
     }
 }

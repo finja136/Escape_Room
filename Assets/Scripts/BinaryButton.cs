@@ -1,42 +1,71 @@
+using System.Collections;
 using UnityEngine;
-
 
 public class BinaryButton : MonoBehaviour
 {
+    [Header("Bit Value (1,2,4,8)")]
     [SerializeField] private int bitValue;
+
+    [Header("References")]
     [SerializeField] private ReactorPuzzleManager manager;
 
-    [SerializeField] private Transform buttonTop;
-    [SerializeField] private float pressedY = 0.01f;
-    [SerializeField] private float normalY = 0.02f;
+    [Header("Button Animation Settings")]
+    [SerializeField] private float moveSpeed = 0.1f;
+    [SerializeField] private float moveDist = 0.0025f;
+    [SerializeField] private float pressedTime = 0.1f;
 
-    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
+    private bool moving;
 
-    private void Awake()
+    // XR EVENT CALL
+    public void PressButton()
     {
-        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
-        interactable.selectEntered.AddListener(_ => OnPressed());
+        if (!moving)
+        {
+            manager.ToggleBit(bitValue);
+            StartCoroutine(MoveSmooth());
+        }
     }
 
-    private void OnPressed()
+    private IEnumerator MoveSmooth()
     {
-        manager.ToggleBit(bitValue);
-        Animate();
-    }
+        moving = true;
 
-    private void Animate()
-    {
-        Vector3 pos = buttonTop.localPosition;
-        pos.y = pressedY;
-        buttonTop.localPosition = pos;
+        Vector3 startPos = transform.localPosition;
+        Vector3 endPos = startPos + new Vector3(0, 0, moveDist);
 
-        Invoke(nameof(Reset), 0.1f);
-    }
+        float elapsedTime = 0f;
 
-    private void Reset()
-    {
-        Vector3 pos = buttonTop.localPosition;
-        pos.y = normalY;
-        buttonTop.localPosition = pos;
+        // push down
+        while (elapsedTime < moveSpeed)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / moveSpeed);
+
+            transform.localPosition = Vector3.Lerp(startPos, endPos, t);
+            yield return null;
+        }
+
+        transform.localPosition = endPos;
+
+        yield return new WaitForSeconds(pressedTime);
+
+        // move back
+        startPos = transform.localPosition;
+        endPos = startPos - new Vector3(0, 0, moveDist);
+
+        elapsedTime = 0f;
+
+        while (elapsedTime < moveSpeed)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / moveSpeed);
+
+            transform.localPosition = Vector3.Lerp(startPos, endPos, t);
+            yield return null;
+        }
+
+        transform.localPosition = endPos;
+
+        moving = false;
     }
 }
