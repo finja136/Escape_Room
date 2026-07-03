@@ -13,8 +13,6 @@ public class ReactorPuzzleManager : MonoBehaviour
     [SerializeField] private Sprite[] puzzleSprites;
     [SerializeField] private UnityEngine.UI.Image puzzleDisplay;
 
-    [SerializeField] private BinaryButton[] bitButtons;
-
     [Header("Solutions [3 puzzles][4 numbers]")]
     [SerializeField] private int[] solutionPuzzle1 = new int[4];
     [SerializeField] private int[] solutionPuzzle2 = new int[4];
@@ -40,6 +38,9 @@ public class ReactorPuzzleManager : MonoBehaviour
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color wrongColor = Color.red;
     [SerializeField] private float feedbackTime = 0.5f;
+    [SerializeField] private Renderer[] rowIndicators;
+    [SerializeField] private Material inactiveMat;
+    [SerializeField] private Material activeMat;
 
     [Header("Scene Transition")]
     [SerializeField] private string nextSceneName;
@@ -78,6 +79,8 @@ public class ReactorPuzzleManager : MonoBehaviour
         currentValue = 0;
         currentDigit = 0;
         enteredValues = new int[4];
+
+        UpdateRowIndicators();
     }
 
     // =========================
@@ -153,6 +156,8 @@ public class ReactorPuzzleManager : MonoBehaviour
 
         currentDigit++;
         currentValue = 0;
+
+        UpdateRowIndicators();
 
         if (currentDigit >= 4)
         {
@@ -246,6 +251,7 @@ public class ReactorPuzzleManager : MonoBehaviour
         currentValue = 0;
         enteredValues = new int[4];
 
+        UpdateRowIndicators();
         ClearDisplay();
     }
 
@@ -254,6 +260,16 @@ public class ReactorPuzzleManager : MonoBehaviour
         for (int i = 0; i < cells.Length; i++)
         {
             cells[i].material = offMaterial;
+        }
+    }
+
+    private void UpdateRowIndicators()
+    {
+        for (int i = 0; i < rowIndicators.Length; i++)
+        {
+            rowIndicators[i].material = (i == currentDigit)
+                ? activeMat
+                : inactiveMat;
         }
     }
 }
