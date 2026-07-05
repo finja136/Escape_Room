@@ -895,7 +895,6 @@ GameObject:
   - component: {fileID: 24273363}
   - component: {fileID: 24273362}
   - component: {fileID: 24273361}
-  - component: {fileID: 24273360}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -925,34 +924,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &24273360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24273358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 24273359}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &24273361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3089,7 +3060,6 @@ GameObject:
   - component: {fileID: 112747839}
   - component: {fileID: 112747838}
   - component: {fileID: 112747837}
-  - component: {fileID: 112747836}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -3117,34 +3087,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.244}
   m_SizeDelta: {x: 1, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &112747836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112747834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 112747835}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &112747837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5777,7 +5719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: 'codes.Array.data[2]'
-      value: 1234
+      value: 2134
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: 2cf8072ebed1149479d25d30c324125c, type: 3}
       propertyPath: indicators.Array.size
@@ -12253,7 +12195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 1d52fd87fedf4bc47b9053ffdb0c56d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 1d52fd87fedf4bc47b9053ffdb0c56d5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12261,7 +12203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 1d52fd87fedf4bc47b9053ffdb0c56d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: 1d52fd87fedf4bc47b9053ffdb0c56d5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17336,7 +17278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22264,7 +22206,6 @@ GameObject:
   - component: {fileID: 758262543}
   - component: {fileID: 758262542}
   - component: {fileID: 758262541}
-  - component: {fileID: 758262540}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -22295,34 +22236,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &758262540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758262538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 758262539}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &758262541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33176,7 +33089,6 @@ GameObject:
   - component: {fileID: 1153591115}
   - component: {fileID: 1153591114}
   - component: {fileID: 1153591113}
-  - component: {fileID: 1153591116}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -33269,34 +33181,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1153591116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153591111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 1153591112}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!1001 &1154465986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33889,7 +33773,6 @@ GameObject:
   - component: {fileID: 1183001180}
   - component: {fileID: 1183001179}
   - component: {fileID: 1183001178}
-  - component: {fileID: 1183001177}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -33920,34 +33803,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1183001177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183001175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 1183001176}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &1183001178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35464,7 +35319,6 @@ GameObject:
   - component: {fileID: 1229327271}
   - component: {fileID: 1229327270}
   - component: {fileID: 1229327269}
-  - component: {fileID: 1229327268}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -35492,34 +35346,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.015}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1229327268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229327266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 1229327267}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &1229327269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36558,7 +36384,6 @@ GameObject:
   - component: {fileID: 1268161550}
   - component: {fileID: 1268161549}
   - component: {fileID: 1268161548}
-  - component: {fileID: 1268161547}
   m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
@@ -36589,34 +36414,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1268161547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268161545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee10491ef6d5d1d49a270cf6b09bdc19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Oculus.VR::OVROverlayCanvas
-  _mipmapMode: 0
-  _dynamicResolution: 1
-  _redrawResolutionThreshold: 2147483647
-  rectTransform: {fileID: 1268161546}
-  maxTextureSize: 2048
-  manualRedraw: 0
-  renderInterval: 1
-  renderIntervalFrameOffset: 0
-  superSample: 0
-  layer: 5
-  opacity: 2
-  shape: 0
-  curveRadius: 1
-  overlapMask: 0
-  compositionMode: 1
-  _overlayEnabled: 1
 --- !u!114 &1268161548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56534,10 +56331,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeypadPuzzleManager
   puzzleImage: {fileID: 1901149029}
   puzzleSprites:
-  - {fileID: 21300000, guid: 05a669944ed663a45893a751ee9559c0, type: 3}
-  - {fileID: 21300000, guid: 861054eadfea07046b0ce7379048379e, type: 3}
-  - {fileID: 21300000, guid: a76b72abda8d9624daf65213954303bc, type: 3}
-  - {fileID: 21300000, guid: a76b72abda8d9624daf65213954303bc, type: 3}
+  - {fileID: 21300000, guid: 2ddf23721e6d6ec4ebcde93706308581, type: 3}
+  - {fileID: 21300000, guid: cd61e2fd65ab0e34c8e4efa90d3c09b6, type: 3}
+  - {fileID: 21300000, guid: 47a03830585120241a89446c0b54cda4, type: 3}
+  - {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &1956824748
 MonoBehaviour:
   m_ObjectHideFlags: 0
