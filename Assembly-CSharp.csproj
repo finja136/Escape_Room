@@ -60,6 +60,7 @@
     <Compile Include="Assets\Keypad\Scripts\SlidingDoor.cs" />
     <Compile Include="Assets\Scripts\SceneLoaderWithTimer.cs" />
     <Compile Include="Assets\Keypad\Scripts\KeypadButton.cs" />
+    <Compile Include="Assets\Scripts\HintMenuToggle.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
@@ -76,7 +77,9 @@
     <Compile Include="Assets\Scripts\BinaryButton.cs" />
     <Compile Include="Assets\Scripts\MonitorSwitcher.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\Callout.cs" />
+    <Compile Include="Assets\Scripts\FollowHeadUI.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\CalloutGazeController.cs" />
+    <Compile Include="Assets\Scripts\HintSystemManager.cs" />
     <Compile Include="Assets\Scripts\EnergyPuzzleManager.cs" />
     <Compile Include="Assets\Scripts\ReactorPuzzleManager.cs" />
     <Compile Include="Assets\Barking_Dog\Common Scripts\Turn_Move.cs" />

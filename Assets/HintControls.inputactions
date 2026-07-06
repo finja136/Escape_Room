@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "HintControls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "953cc0b7-3915-44a5-87d9-ecb4602ac67a",
+            "actions": [
+                {
+                    "name": "ToggleHintMenu",
+                    "type": "Button",
+                    "id": "c430100a-4502-456e-9599-a51e4f93c853",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "86303785-9465-4237-8551-0adc58364c37",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleHintMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

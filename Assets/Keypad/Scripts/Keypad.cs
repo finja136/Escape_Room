@@ -12,7 +12,7 @@ namespace NavKeypad
         [Header("Events")]
         [SerializeField] private UnityEvent onAccessGranted;
         [SerializeField] private UnityEvent onAccessDenied;
-        [Header("Combination Code (9 Numbers Max)")]
+        [Header("Combination Code (4 Numbers Max)")]
         [SerializeField] private KeypadPuzzleManager puzzleManager;
 
         public UnityEvent OnAccessGranted => onAccessGranted;
@@ -47,6 +47,8 @@ namespace NavKeypad
         [SerializeField] private Renderer panelMesh;
         [SerializeField] private TMP_Text keypadDisplayText;
         [SerializeField] private AudioSource audioSource;
+        [Header("Hint System")]
+        [SerializeField] private HintSystemManager hintSystemManager;
 
 
         private string currentInput;
@@ -119,7 +121,7 @@ namespace NavKeypad
                     CheckCombo();
                     break;
                 default:
-                    if (currentInput != null && currentInput.Length == 9) // 9 max passcode size 
+                    if (currentInput != null && currentInput.Length == 4) // 9 max passcode size 
                     {
                         return;
                     }
@@ -167,12 +169,13 @@ namespace NavKeypad
             if (currentStage < codes.Length)
             {
                 puzzleManager.ShowPuzzle(currentStage);
+                
             }
             else
             {
                 onAccessGranted?.Invoke();
             }
-
+            hintSystemManager.UpdatePuzzleIndex();
             displayingResult = false;
         }
 

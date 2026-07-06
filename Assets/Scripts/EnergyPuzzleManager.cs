@@ -6,12 +6,15 @@ public class EnergyPuzzleManager : MonoBehaviour
     [SerializeField] private EnergySlot[] slots;
     [SerializeField] private DoorController door;
     [SerializeField] private Keypad keypad;
+    [SerializeField] private HintSystemManager hintSystem;
 
     [ContextMenu("Force Solve Puzzle")]
     public void ForceSolvePuzzle()
     {
         Debug.Log("PUZZLE FORCED COMPLETE");
         keypad.UnlockKeypad();
+        hintSystem.UpdatePuzzleIndex();
+
     }
 
     public void CheckPuzzle()
@@ -37,5 +40,6 @@ public class EnergyPuzzleManager : MonoBehaviour
         }
 
         keypad.UnlockKeypad();
+        hintSystem.UpdatePuzzleIndex();
     }
 }

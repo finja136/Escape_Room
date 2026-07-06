@@ -49,7 +49,11 @@ public class ReactorPuzzleManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip correctClip;
     [SerializeField] private AudioClip wrongClip;
-    [SerializeField] private AudioClip buttonClickClip; 
+    [SerializeField] private AudioClip buttonClickClip;
+
+
+    [Header("Hint System")]
+    [SerializeField] private HintSystemManager hintSystemManager;
     // =========================
     // INIT
     // =========================
@@ -199,6 +203,7 @@ public class ReactorPuzzleManager : MonoBehaviour
         {
             audioSource.PlayOneShot(correctClip);
             AdvancePuzzle();
+            hintSystemManager.UpdatePuzzleIndex();
         }
         else
         {
