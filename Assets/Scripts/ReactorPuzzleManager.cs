@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class ReactorPuzzleManager : MonoBehaviour
 {
     [Header("Puzzle Progress")]
@@ -58,8 +59,11 @@ public class ReactorPuzzleManager : MonoBehaviour
     // INIT
     // =========================
 
+    private float startTime;
+
     private void Start()
     {
+        startTime = Time.time;
         LoadPuzzle();
         ClearDisplay();
     }
@@ -238,6 +242,9 @@ public class ReactorPuzzleManager : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {
+            GameResults.GameOver = true;
+            GameResults.Won = true;
+            GameResults.Score = ComputeScore();
             SceneManager.LoadScene(nextSceneName);
         }
         else
@@ -276,5 +283,14 @@ public class ReactorPuzzleManager : MonoBehaviour
                 ? activeMat
                 : inactiveMat;
         }
+    }
+
+    private int ComputeScore()
+    {
+        float elapsedTime = Time.time - startTime;
+        int baseScore = 20000;
+        int hintsUsed = hintSystemManager.GetHintsUsed();
+        int scorePenalty = hintsUsed * 500 + Mathf.RoundToInt(elapsedTime*3.7f);
+        return Mathf.Max(baseScore - scorePenalty, 0);
     }
 }

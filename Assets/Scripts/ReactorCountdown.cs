@@ -10,7 +10,7 @@ public class ReactorCountdown : MonoBehaviour
 
     private float remainingTime;
 
-    public bool GameOver = false;
+    private bool GameOver;
 
     void Start()
     {
@@ -44,7 +44,9 @@ public class ReactorCountdown : MonoBehaviour
 
     {
         GameOver = true;
-
+        GameResults.GameOver = true;
+        GameResults.Won = false;
+        GameResults.Score = 0;
         SceneManager.LoadScene("GameLobby");
     }
 }

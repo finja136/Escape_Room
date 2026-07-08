@@ -4625,24 +4625,26 @@ MonoBehaviour:
   - The second and third clue determine the position of the yellow cell.
   - The blue cell has to be to the right of the green cell.
   - Green, Blue, Yellow, Red
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
-  - 12
-  - 13
-  - 14
-  - 15
-  - 16
-  - 17
-  - 18
-  - 19
-  - 20
+  - These are not clocks.
+  - Fractions
+  - 2 3 6 5
+  - The information you need is in the letters.
+  - R + e + h
+  - 1 7 6 4
+  - 'A palindorme is a sequence of symbols, that reads the same forwards as backwards. '
+  - The 22nd century begins in the year 2100.
+  - 2 1 3 4
+  - Each color represents a binary digit. You can find their values in a puzzle you
+    already solved.
+  - The solution has to be read top-down and you need four numbers.
+  - All colors (15), yellow + green (5), red + blue + green (11), red + yellow +
+    green (13)
+  - Count brushstrokes.
+  - Lines cant reverse.
+  - 6 13 2 5
+  - Only two of the clues are needed to solve the puzzle.
+  - There is only one number smaller than 16 with a cubic root.
+  - 8 2 9 3
 --- !u!1001 &149758680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25245,7 +25247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ReactorCountdown
   timerText: {fileID: 0}
   startMinutes: 30
-  GameOver: 0
 --- !u!4 &871954574
 Transform:
   m_ObjectHideFlags: 0
@@ -57520,8 +57521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReactorCountdown
   timerText: {fileID: 488814184}
-  startMinutes: 30
-  GameOver: 0
+  startMinutes: 45
 --- !u!4 &1956824745
 Transform:
   m_ObjectHideFlags: 0

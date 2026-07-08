@@ -13,6 +13,8 @@ public class HintSystemManager : MonoBehaviour
     private int currentHintIndex = 0;
     private int currentPuzzleIndex = 0;
 
+    private int hintsUsed = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +27,7 @@ public class HintSystemManager : MonoBehaviour
         if (currentHintIndex < 3)
         {
             currentHintIndex++;
+            hintsUsed++;
             UpdateUI();
         }
     }
@@ -53,6 +56,11 @@ public class HintSystemManager : MonoBehaviour
         currentPuzzleIndex+=3;
         currentHintIndex = 0;
         UpdateUI();
+    }
+
+    public int GetHintsUsed()
+    {
+        return hintsUsed;
     }
 
 
