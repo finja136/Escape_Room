@@ -55,6 +55,7 @@
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRKnob.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BooleanToggleVisualsController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\RayAttachModifier.cs" />
+    <Compile Include="Assets\Scripts\FootstepsAudio.cs" />
     <Compile Include="Assets\Scripts\BinaryEnterButton.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Keypad\Scripts\SlidingDoor.cs" />

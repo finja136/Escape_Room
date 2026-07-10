@@ -8,6 +8,11 @@ public class ReactorCountdown : MonoBehaviour
 
     [SerializeField] private float startMinutes = 30f;
 
+    [Header("Alarm Audio")]
+    [SerializeField] private AudioSource alarmAudioSource;
+    [SerializeField] private AudioClip alarmClip;
+
+    private bool alarmPlayed = false;
     private float remainingTime;
 
     private bool GameOver;
@@ -24,12 +29,27 @@ public class ReactorCountdown : MonoBehaviour
 
         remainingTime -= Time.deltaTime;
 
+        if (remainingTime < 300)
+        {
+            PlayAlarmSound();
+        }
+
         if (remainingTime <= 0)
         {
             remainingTime = 0;
             TriggerGameOver();
         }
         UpdateDisplay();
+    }
+
+    private void PlayAlarmSound()
+    {
+        if (!alarmAudioSource.isPlaying)
+        {
+            alarmAudioSource.clip = alarmClip;
+            alarmAudioSource.loop = true;
+            alarmAudioSource.Play();
+        }
     }
 
     private void UpdateDisplay()
