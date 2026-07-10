@@ -12,7 +12,10 @@ public class ReactorCountdown : MonoBehaviour
     [SerializeField] private AudioSource alarmAudioSource;
     [SerializeField] private AudioClip alarmClip;
 
-    private bool alarmPlayed = false;
+    [Header("Reactor Light Pulse")]
+    [SerializeField] private ReactorLightPulse reactorLightPulse;
+
+    private bool PulseActive;
     private float remainingTime;
 
     private bool GameOver;
@@ -32,6 +35,7 @@ public class ReactorCountdown : MonoBehaviour
         if (remainingTime < 300)
         {
             PlayAlarmSound();
+            StartLightPulse();
         }
 
         if (remainingTime <= 0)
@@ -49,6 +53,15 @@ public class ReactorCountdown : MonoBehaviour
             alarmAudioSource.clip = alarmClip;
             alarmAudioSource.loop = true;
             alarmAudioSource.Play();
+        }
+    }
+
+    private void StartLightPulse()
+    {
+        if(!PulseActive)
+        {
+            reactorLightPulse.StartEmergencyMode();
+            PulseActive = true;
         }
     }
 

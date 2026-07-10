@@ -63,11 +63,13 @@
     <Compile Include="Assets\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\HintMenuToggle.cs" />
     <Compile Include="Assets\Scripts\GameResults.cs" />
+    <Compile Include="Assets\Scripts\LightFlickerManager.cs" />
     <Compile Include="Assets\Scripts\DoorController.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\BezierCurve.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\LaunchProjectile.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\HandSubsystemManager.cs" />
     <Compile Include="Assets\Barking_Dog\Common Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\ReactorLightPulse.cs" />
     <Compile Include="Assets\Scripts\KeypadPuzzleManager.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\GalaxyBox2\Scripts\examplescene.cs" />
