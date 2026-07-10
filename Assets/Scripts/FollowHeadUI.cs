@@ -5,75 +5,107 @@ public class FollowHeadUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform head;
 
-    [Header("Offset")]
+    [Header("Local Offset")]
     [SerializeField] private Vector3 currentOffset = new Vector3(0.2f, -0.15f, 0.6f);
 
-    [Header("Rotation Settings")]
-    [SerializeField] private float rotationThreshold = 50f;
-    [SerializeField] private float rotationSmooth = 6f;
+    [Header("Rotation")]
+    [SerializeField] private float rotationThreshold = 60f;
+    [SerializeField] private float rotationSmooth = 8f;
 
     private bool visible;
     private bool grabbed;
 
-    void LateUpdate()
+    // Referenzrotation, auf die sich der Offset bezieht
+    private Quaternion referenceRotation;
+
+    // Zielrotation des Menüs
+    private Quaternion targetRotation;
+
+    private void Start()
+    {
+        if (head == null)
+            return;
+
+        referenceRotation = GetHeadYawRotation();
+        targetRotation = transform.rotation;
+    }
+
+    private void LateUpdate()
     {
         if (!visible || head == null || grabbed)
             return;
 
-        // ---------------------------
-        // POSITION (dein funktionierender Teil)
-        // ---------------------------
+        //----------------------------------
+        // Prüfen, ob Deadzone überschritten
+        //----------------------------------
 
-        Vector3 forward = head.forward;
-        forward.y = 0f;
-        forward.Normalize();
+        Quaternion currentHeadRotation = GetHeadYawRotation();
 
-        Vector3 right = head.right;
-        right.y = 0f;
-        right.Normalize();
+        float delta =
+            Quaternion.Angle(referenceRotation, currentHeadRotation);
 
-        Vector3 targetPos =
-            head.position +
-            forward * currentOffset.z +
-            right * currentOffset.x +
-            Vector3.up * currentOffset.y;
-
-        transform.position = targetPos;
-
-        // ---------------------------
-        // ROTATION (NEU: Deadzone System)
-        // ---------------------------
-
-        Vector3 toMenu = transform.position - head.position;
-        toMenu.y = 0f;
-
-        Vector3 headForward = head.forward;
-        headForward.y = 0f;
-
-        if (toMenu.sqrMagnitude > 0.001f)
+        if (delta >= rotationThreshold)
         {
-            float angle = Vector3.Angle(headForward, toMenu);
+            // Wie weit hat sich der Spieler wirklich gedreht?
+            Quaternion deltaRotation =
+                currentHeadRotation * Quaternion.Inverse(referenceRotation);
 
-            if (angle > rotationThreshold)
-            {
-                Quaternion targetRot = Quaternion.LookRotation(toMenu);
+            // Menürotation mitdrehen
+            targetRotation = deltaRotation * targetRotation;
 
-                transform.rotation = Quaternion.Slerp(
-                    transform.rotation,
-                    targetRot,
-                    Time.deltaTime * rotationSmooth);
-            }
+            // Neue Referenz
+            referenceRotation = currentHeadRotation;
         }
+
+        //----------------------------------
+        // Position
+        //----------------------------------
+
+        Vector3 forward = referenceRotation * Vector3.forward;
+        Vector3 right = referenceRotation * Vector3.right;
+
+        transform.position =
+            head.position +
+            right * currentOffset.x +
+            Vector3.up * currentOffset.y +
+            forward * currentOffset.z;
+
+        //----------------------------------
+        // Rotation
+        //----------------------------------
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            Time.deltaTime * rotationSmooth);
     }
 
-    // ---------------------------
-    // VISIBILITY
-    // ---------------------------
+    //------------------------------------------------
+
+    private Quaternion GetHeadYawRotation()
+    {
+        Vector3 forward = head.forward;
+        forward.y = 0f;
+
+        if (forward.sqrMagnitude < 0.0001f)
+            return Quaternion.identity;
+
+        forward.Normalize();
+
+        return Quaternion.LookRotation(forward, Vector3.up);
+    }
+
+    //------------------------------------------------
+    // Visibility
+    //------------------------------------------------
 
     public void Show()
     {
         visible = true;
         gameObject.SetActive(true);
+
+        referenceRotation = GetHeadYawRotation();
+        targetRotation = transform.rotation;
     }
 
     public void Hide()
@@ -82,9 +114,9 @@ public class FollowHeadUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // ---------------------------
-    // GRAB SYSTEM
-    // ---------------------------
+    //------------------------------------------------
+    // Grab
+    //------------------------------------------------
 
     public void BeginGrab()
     {
@@ -95,16 +127,15 @@ public class FollowHeadUI : MonoBehaviour
     {
         grabbed = false;
 
-        // Offset neu speichern
+        // Neue Referenzrotation setzen
+        referenceRotation = GetHeadYawRotation();
+        targetRotation = transform.rotation;
+
+        // Offset relativ zur Referenzrotation berechnen
         Vector3 delta = transform.position - head.position;
 
-        Vector3 forward = head.forward;
-        forward.y = 0f;
-        forward.Normalize();
-
-        Vector3 right = head.right;
-        right.y = 0f;
-        right.Normalize();
+        Vector3 forward = referenceRotation * Vector3.forward;
+        Vector3 right = referenceRotation * Vector3.right;
 
         currentOffset = new Vector3(
             Vector3.Dot(delta, right),
