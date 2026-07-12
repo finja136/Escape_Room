@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class ReactorCountdown : MonoBehaviour
 {
-    [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TMP_Text[] timerText;
 
     [SerializeField] private float startMinutes = 30f;
 
@@ -70,8 +70,11 @@ public class ReactorCountdown : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
 
-        timerText.text = "REACTOR MELTDOWN IN\n" +
-                 $"{minutes:00}:{seconds:00}";
+        for (int i = 0; i < timerText.Length; i++)
+        {
+            timerText[i].text = "REACTOR MELTDOWN IN\n" +
+                                $"{minutes:00}:{seconds:00}";
+        }
     }
     void TriggerGameOver()
 
