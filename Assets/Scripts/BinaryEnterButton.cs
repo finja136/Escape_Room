@@ -10,9 +10,9 @@ public class BinaryEnterButton : MonoBehaviour
     [SerializeField] private float releasedY = 0.02f;
     [SerializeField] private float resetDelay = 0.1f;
 
+    // Hier funktioniert die Animationi weniger kompliziert als bei den anderen Buttons, da wir verschiedene Sachen ausprobieren wollten
     public void Press()
     {
-        // visual press
         Vector3 pos = buttonTop.localPosition;
         pos.y = pressedY;
         buttonTop.localPosition = pos;

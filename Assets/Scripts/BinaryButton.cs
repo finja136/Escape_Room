@@ -14,10 +14,9 @@ public class BinaryButton : MonoBehaviour
     [SerializeField] private float moveDist = 0.0025f;
     [SerializeField] private float pressedTime = 0.1f;
 
-    private bool moving;
+    private bool moving; // Flag um zu überprüfen, ob die Animation bereits läuft
 
-    // XR EVENT CALL
-    public void PressButton()
+    public void PressButton() // Methode wird beim Button-Press aufgerufen, um den Bitwert zu toggeln und die Animation zu starten
     {
         if (!moving)
         {
@@ -26,16 +25,14 @@ public class BinaryButton : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveSmooth()
+    private IEnumerator MoveSmooth() // Methode wurde fast unverändert aus KeypadButton übernommen
     {
         moving = true;
 
         Vector3 startPos = transform.localPosition;
         Vector3 endPos = startPos + new Vector3(0, 0, moveDist);
-
         float elapsedTime = 0f;
 
-        // push down
         while (elapsedTime < moveSpeed)
         {
             elapsedTime += Time.deltaTime;
@@ -49,23 +46,18 @@ public class BinaryButton : MonoBehaviour
 
         yield return new WaitForSeconds(pressedTime);
 
-        // move back
         startPos = transform.localPosition;
         endPos = startPos - new Vector3(0, 0, moveDist);
-
         elapsedTime = 0f;
 
         while (elapsedTime < moveSpeed)
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / moveSpeed);
-
             transform.localPosition = Vector3.Lerp(startPos, endPos, t);
             yield return null;
         }
-
         transform.localPosition = endPos;
-
         moving = false;
     }
 }

@@ -2646,7 +2646,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "<Size=150%><b>Congratulations!</b></size> \n You survived! Now your stuck
+    on an alien space ship alone in outer space. While you hope someone will rescue
+    you, you can take some comfort in your\n<b>Gamescore: </b>0\n If you want to
+    try again for a better score, interact with the hologram."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2673,12 +2676,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 20
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2712,7 +2715,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -146.86293, y: -67.85937, z: -140.41034, w: -70.696236}
+  m_margin: {x: -141.65004, y: -67.85937, z: -136.39973, w: -68.37358}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3945,11 +3948,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181006, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 181016, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 421674, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6059,16 +6062,38 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\nATTENTION UNAUTHORIZED PASSENGER\n\nThis vessel has been completely
-    evacuated due to a \"minor technical hiccup\" (specifically, the main reactor
-    turning into an impending supernova).\n\nAs a stowaway, you were technically
-    not on the manifest, meaning the automated escape system didn't bother counting
-    you. Don't panic. Or do. Honestly, panicking is quite reasonable right now.\n\nThe
+  m_text: '
+
+
+    ATTENTION UNAUTHORIZED PASSENGER
+
+
+    This vessel has been completely
+    evacuated due to a "minor technical hiccup" (specifically, the main reactor turning
+    into an impending supernova).
+
+
+    As a stowaway, you were technically not on
+    the manifest, meaning the automated escape system didn''t bother counting you.
+    Don''t panic. Or do. Honestly, panicking is quite reasonable right now.
+
+
+    The
     reactor will detonate in exactly 30 minutes, vaporizing this ship and, more importantly,
-    destroying a perfectly good collection of digital tea leaves.\n\nYour task, assuming
-    you wish to survive, is: Find the reactor, defuse the core, and try not to die.\n\nNote:
-    You may request hints for the puzzles at any time. However, be advised that doing
-    so will result in a penalty to your final score. \n\n"
+    destroying a perfectly good collection of digital tea leaves.
+
+
+    Your task,
+    assuming you wish to survive, is: Find the reactor, defuse the core, and try
+    not to die.
+
+
+    Note: You may request hints for the puzzles at any time. However,
+    be advised that doing so will result in a penalty to your final score.  To start
+    your quest, interact with the hologram.
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7372,11 +7397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181006, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 181016, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 421674, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7556,11 +7581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181006, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 181016, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 421674, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8171,18 +8196,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751134370}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.407}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -3.149}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1545599247}
   - {fileID: 686372041}
   m_Father: {fileID: 815623960}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.357, y: 1.434}
+  m_AnchoredPosition: {x: 1.004, y: 1.434}
   m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751134372
@@ -8998,11 +9023,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 181006, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 181016, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 421674, guid: 031729a7ef10c4aa1b5e0060c2f63acd, type: 3}
       propertyPath: m_LocalPosition.x
