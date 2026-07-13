@@ -59,7 +59,6 @@
     <Compile Include="Assets\Scripts\BinaryEnterButton.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\XRPokeFollowAffordanceFill.cs" />
     <Compile Include="Assets\Keypad\Scripts\SlidingDoor.cs" />
-    <Compile Include="Assets\Scripts\SceneLoaderWithTimer.cs" />
     <Compile Include="Assets\Keypad\Scripts\KeypadButton.cs" />
     <Compile Include="Assets\Scripts\HintMenuToggle.cs" />
     <Compile Include="Assets\Scripts\GameResults.cs" />
@@ -92,7 +91,6 @@
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\GameEndManager.cs" />
     <Compile Include="Assets\VRTemplateAssets\Scripts\AnchorVisuals.cs" />
-    <Compile Include="Assets\Scripts\GameTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

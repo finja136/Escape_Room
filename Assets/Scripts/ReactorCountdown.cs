@@ -32,7 +32,7 @@ public class ReactorCountdown : MonoBehaviour
 
         remainingTime -= Time.deltaTime;
 
-        if (remainingTime < 300)
+        if (remainingTime < 300) // Ab 5 Minuten wird alarm abgespielt und die Emergency Lights im Reactor raum pulsieren
         {
             PlayAlarmSound();
             StartLightPulse();
@@ -41,7 +41,7 @@ public class ReactorCountdown : MonoBehaviour
         if (remainingTime <= 0)
         {
             remainingTime = 0;
-            TriggerGameOver();
+            TriggerGameOver(); // Wenn Zeit abläuft wird in GameLobby teleortiert und GameOver gesetzt
         }
         UpdateDisplay();
     }
@@ -77,7 +77,6 @@ public class ReactorCountdown : MonoBehaviour
         }
     }
     void TriggerGameOver()
-
     {
         GameOver = true;
         GameResults.GameOver = true;

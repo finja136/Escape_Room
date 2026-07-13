@@ -23,11 +23,9 @@ public class FootstepAudio : MonoBehaviour
     }
 
 
-    private void Update()
+    private void Update() // Berechnet Distanz seit letztem Update und addiert diese, bis sie größer als stepDistance wird, dann wird sound abgespielt und Distanz zurückgesetzt
     {
         Vector3 movement = player.position - lastPosition;
-
-        // Kopfbewegungen ignorieren
         movement.y = 0;
 
         float distance = movement.magnitude;
@@ -36,20 +34,16 @@ public class FootstepAudio : MonoBehaviour
         {
             distanceSinceLastStep += distance;
         }
-
-
         if (distanceSinceLastStep >= stepDistance)
         {
             PlayFootstep();
             distanceSinceLastStep = 0;
         }
-
-
         lastPosition = player.position;
     }
 
 
-    private void PlayFootstep()
+    private void PlayFootstep() //Spielt zufälligen Footstep Sound ab
     {
         if (footstepClips.Length == 0)
             return;

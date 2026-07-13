@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KeypadPuzzleManager : MonoBehaviour
+public class KeypadPuzzleManager : MonoBehaviour // Manged nur UI des Puzzles, Logik ist im Keypad Script
 {
     [SerializeField] private Image puzzleImage;
-    [SerializeField] private Sprite[] puzzleSprites;
+    [SerializeField] private Sprite[] puzzleSprites; // letztes Image im Array wird als "Display-off" image benutzt
 
     private void Start()
     {

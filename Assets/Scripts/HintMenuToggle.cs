@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HintMenuToggle : MonoBehaviour
+public class HintMenuToggle : MonoBehaviour // Togglet das HintMenu, wenn auf linkem Controller die Menü-Taste gedrückt wird.
 {
     [Header("References")]
     public FollowHeadUI hintMenu;
@@ -11,7 +11,7 @@ public class HintMenuToggle : MonoBehaviour
 
     private bool isOpen;
 
-    private void OnEnable()
+    private void OnEnable() // Aktiviert Hint-System nur, wenn die Escape-Room szene geladen wird. Sonst wird es deaktiviert
     {
         toggleAction.action.performed += Toggle;
         toggleAction.action.Enable();
@@ -23,7 +23,7 @@ public class HintMenuToggle : MonoBehaviour
         toggleAction.action.Disable();
     }
 
-    private void Toggle(InputAction.CallbackContext ctx)
+    private void Toggle(InputAction.CallbackContext ctx) //Togglet das HintMenu über die InputAction
     {
         isOpen = !isOpen;
 

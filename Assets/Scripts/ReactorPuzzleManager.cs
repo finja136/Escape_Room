@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class ReactorPuzzleManager : MonoBehaviour
+public class ReactorPuzzleManager : MonoBehaviour // In diesem Rätsel wird Logik und UI zusammen verwaltet
 {
     [Header("Puzzle Progress")]
     [SerializeField] private int playerState = 0; // 0–2 (3 Unterrätsel)
@@ -14,7 +14,7 @@ public class ReactorPuzzleManager : MonoBehaviour
     [SerializeField] private Sprite[] puzzleSprites;
     [SerializeField] private UnityEngine.UI.Image puzzleDisplay;
 
-    [Header("Solutions [3 puzzles][4 numbers]")]
+    [Header("Solutions [3 puzzles][4 numbers]")]   // Da die Lösungen Zahlen bis 15 enthalten, kann das Ergebnis nicht einfach als String dargestellt werden, sondern muss mit 3 Arrays übergeben werden
     [SerializeField] private int[] solutionPuzzle1 = new int[4];
     [SerializeField] private int[] solutionPuzzle2 = new int[4];
     [SerializeField] private int[] solutionPuzzle3 = new int[4];
@@ -30,9 +30,9 @@ public class ReactorPuzzleManager : MonoBehaviour
     [SerializeField] private Material bit8Material; // 8
 
     [Header("Bit State")]
-    private int currentValue = 0;
-    private int currentDigit = 0;
-    private int[] enteredValues = new int[4];
+    private int currentValue = 0; // 0-15 (4 bits, die Pro Zahl eingegeben werden müssen)
+    private int currentDigit = 0; // 0-3 (4 Zahlen, die Pro Rätsel eingegeben werden müssen)
+    private int[] enteredValues = new int[4]; // Speichert eingegebene Values
 
     [Header("Feedback")]
     [SerializeField] private Image feedbackPanel;
@@ -55,31 +55,17 @@ public class ReactorPuzzleManager : MonoBehaviour
 
     [Header("Hint System")]
     [SerializeField] private HintSystemManager hintSystemManager;
-    // =========================
-    // INIT
-    // =========================
-
-    private float startTime;
+    
+    private float startTime; // Da das Script am Ende auch den GameScore berechnet, muss es die Zeit wissen, die seit Szenenstart vergangen ist. Da der ReactorCountdown aber runterzählt und wir das Zeitlimit nicht endgültig festlegen wollen, ist es einfacher das hier zu tracken.
 
     private void Start()
     {
         startTime = Time.time;
         LoadPuzzle();
-        ClearDisplay();
+        ClearDisplay(); // Offmaterial auf alle Zellen
     }
 
-    private int[] GetSolution(int index)
-    {
-        switch (index)
-        {
-            case 0: return solutionPuzzle1;
-            case 1: return solutionPuzzle2;
-            case 2: return solutionPuzzle3;
-            default: return solutionPuzzle1;
-        }
-    }
-
-    private void LoadPuzzle()
+    private void LoadPuzzle() // Zeigt aktuelles Puzzle an und setzt Variablen zurück. Außerdem wird RowIndicator in die nächste Row gesetzt
     {
         if (playerState < puzzleSprites.Length)
             puzzleDisplay.sprite = puzzleSprites[playerState];
@@ -91,28 +77,21 @@ public class ReactorPuzzleManager : MonoBehaviour
         UpdateRowIndicators();
     }
 
-    // =========================
-    // BIT INPUT (called by buttons)
-    // =========================
 
-    public void ToggleBit(int bit)
+    public void ToggleBit(int bit) // Wird von Buttons aufgerufen, togglet deren BitValue und Updated die Anzeige
     {
         audioSource.PlayOneShot(buttonClickClip);
-        currentValue ^= bit; // toggle
+        currentValue ^= bit; // togglet bit
 
         UpdateDisplayLive();
     }
-
-    // =========================
-    // LIVE DISPLAY UPDATE
-    // =========================
 
     private void UpdateDisplayLive()
     {
         for (int bit = 0; bit < 4; bit++)
         {
             int mask = 1 << bit;
-            bool active = (currentValue & mask) != 0;
+            bool active = (currentValue & mask) != 0; // Prüft, ob mask in currentValue gesetzt ist
 
             int index = currentDigit * 4 + bit;
 
@@ -127,20 +106,6 @@ public class ReactorPuzzleManager : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowFeedback(bool correct)
-    {
-        if (feedbackPanel != null)
-        {
-            feedbackPanel.color = correct ? correctColor : wrongColor;
-            feedbackPanel.gameObject.SetActive(true);
-        }
-
-        yield return new WaitForSeconds(feedbackTime);
-
-        if (feedbackPanel != null)
-            feedbackPanel.gameObject.SetActive(false);
-    }
-
     private Material GetMaterialForBit(int bit)
     {
         switch (bit)
@@ -153,11 +118,7 @@ public class ReactorPuzzleManager : MonoBehaviour
         }
     }
 
-    // =========================
-    // ENTER VALUE
-    // =========================
-
-    public void CommitValue()
+    public void CommitValue() // Wird von EnterButton aufgerufen, speichert currentValue in enterdeValues und geht zur nächsten Zahl (RowIndicators). Wenn alle 4 Zahlen eingegeben wurden, wird CheckPuzzle aufgerufen
     {   
         audioSource.PlayOneShot(buttonClickClip);
         enteredValues[currentDigit] = currentValue;
@@ -177,11 +138,7 @@ public class ReactorPuzzleManager : MonoBehaviour
         }
     }
 
-    // =========================
-    // CHECK PUZZLE
-    // =========================
-
-    private void CheckPuzzle()
+    private void CheckPuzzle() // Vergleicht eingegebene Werte mit Lösung und startet HandleResult Coroutine
     {
         bool correct = true;
 
@@ -193,11 +150,21 @@ public class ReactorPuzzleManager : MonoBehaviour
                 break;
             }
         }
-
         StartCoroutine(HandleResult(correct));
     }
 
-    private IEnumerator HandleResult(bool correct)
+    private int[] GetSolution(int index)
+    {
+        switch (index)
+        {
+            case 0: return solutionPuzzle1;
+            case 1: return solutionPuzzle2;
+            case 2: return solutionPuzzle3;
+            default: return solutionPuzzle1;
+        }
+    }
+
+    private IEnumerator HandleResult(bool correct) // Zeigt Feedback an, spielt Sound ab und geht entweder zum nächsten Rätsel oder setzt das aktuelle zurück
     {
         StartCoroutine(ShowFeedback(correct));
 
@@ -216,11 +183,21 @@ public class ReactorPuzzleManager : MonoBehaviour
         }
     }
 
-    // =========================
-    // PROGRESSION
-    // =========================
+    private IEnumerator ShowFeedback(bool correct) // Zeigt FeedbackPanel für feedbackTime an (color hängt von correct ab)
+    {
+        if (feedbackPanel != null)
+        {
+            feedbackPanel.color = correct ? correctColor : wrongColor;
+            feedbackPanel.gameObject.SetActive(true);
+        }
 
-    private void AdvancePuzzle()
+        yield return new WaitForSeconds(feedbackTime);
+
+        if (feedbackPanel != null)
+            feedbackPanel.gameObject.SetActive(false);
+    }
+
+    private void AdvancePuzzle() // Erhöht playerState, lädt das nächste Puzzle oder beendet das Spiel, wenn alle Rätsel gelöst wurden
     {
         playerState++;
 
@@ -234,11 +211,7 @@ public class ReactorPuzzleManager : MonoBehaviour
         ClearDisplay();
     }
 
-    // =========================
-    // FINISH → SCENE CHANGE
-    // =========================
-
-    private void FinishGame()
+    private void FinishGame() // Setzt GameResults (berechnet Score) und lädt GameLobby
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {
@@ -252,10 +225,6 @@ public class ReactorPuzzleManager : MonoBehaviour
             Debug.LogWarning("No scene assigned!");
         }
     }
-
-    // =========================
-    // RESET
-    // =========================
 
     private void ResetCurrentPuzzle()
     {
@@ -279,7 +248,7 @@ public class ReactorPuzzleManager : MonoBehaviour
     {
         for (int i = 0; i < rowIndicators.Length; i++)
         {
-            rowIndicators[i].material = (i == currentDigit)
+            rowIndicators[i].material = (i == currentDigit) // Nur der Rowindicator der aktuellen Row wird aktiv
                 ? activeMat
                 : inactiveMat;
         }

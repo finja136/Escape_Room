@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace NavKeypad
 {
-    public class KeypadButton : MonoBehaviour
+    public class KeypadButton : MonoBehaviour // Wurde unverändert aus Asset Store übernommen
     {
         [Header("Value")]
         [SerializeField] private string value;
@@ -17,7 +17,6 @@ namespace NavKeypad
 
         public void PressButton()
         {
-           
             if (!moving)
             {
                 keypad.AddInput(value);

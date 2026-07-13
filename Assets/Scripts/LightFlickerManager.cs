@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class LightFlickerManager : MonoBehaviour
+public class LightFlickerManager : MonoBehaviour // Bringt Deckenlichter zum Flackern, um "Instabilität" des Reactors deutlich zu machen. Welche Lampe wie lange und in welcher Frequenz flackert ist zufällig
 {
     [Header("Lights")]
     [SerializeField] private Light[] ceilingLights;
@@ -24,7 +24,7 @@ public class LightFlickerManager : MonoBehaviour
     }
 
 
-    IEnumerator FlickerRoutine()
+    IEnumerator FlickerRoutine() // Coroutine, die zufällig Lampen auswählt, die flackern soll
     {
         while (true)
         {
@@ -35,12 +35,10 @@ public class LightFlickerManager : MonoBehaviour
 
             yield return new WaitForSeconds(waitTime);
 
-
             // Zufällige Lampe auswählen
             int index = Random.Range(
                 0,
                 ceilingLights.Length);
-
 
             StartCoroutine(
                 FlickerLight(ceilingLights[index]));
@@ -48,7 +46,7 @@ public class LightFlickerManager : MonoBehaviour
     }
 
 
-    IEnumerator FlickerLight(Light light)
+    IEnumerator FlickerLight(Light light) // Coroutine, die eine Lampe flackern lässt
     {
         float duration = Random.Range(
             minFlickerDuration,
@@ -73,8 +71,6 @@ public class LightFlickerManager : MonoBehaviour
 
             timer += delay;
         }
-
-
         // Am Ende wieder einschalten
         light.enabled = true;
     }

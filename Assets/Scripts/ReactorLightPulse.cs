@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ReactorLightPulse : MonoBehaviour
+public class ReactorLightPulse : MonoBehaviour // Kontrolliert Lichtpulsieren, wenn der Timer auf 5 Minuten fällt
 {
     [Header("Light Parent")]
     [SerializeField] private GameObject lightParent;
@@ -24,7 +24,6 @@ public class ReactorLightPulse : MonoBehaviour
         }
     }
 
-
     public void StartEmergencyMode()
     {
         if (!active)
@@ -33,7 +32,6 @@ public class ReactorLightPulse : MonoBehaviour
             StartCoroutine(PulseLights());
         }
     }
-
 
     IEnumerator PulseLights()
     {
@@ -45,8 +43,7 @@ public class ReactorLightPulse : MonoBehaviour
         }
     }
 
-
-    IEnumerator FadeTo(float targetIntensity)
+    IEnumerator FadeTo(float targetIntensity) // Faded von startIntensity zu targetIntensity über fadeDuration
     {
         float startIntensity = reactorLights[0].intensity;
 
@@ -66,7 +63,6 @@ public class ReactorLightPulse : MonoBehaviour
             {
                 light.intensity = value;
             }
-
             yield return null;
         }
     }

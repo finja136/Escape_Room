@@ -7,8 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 namespace NavKeypad
 {
-    public class Keypad : MonoBehaviour
-    {
+    public class Keypad : MonoBehaviour // Das Script kommt aus dem Asset-Store und wurde für unsere Zwecke angepasst. Davor konnte man nur einen bis zu 9 stellen langen code eingeben. Jetzt ist das script mit dem KeypadPuzzleManager gekoppelt.
+    {                                   // Außerdem kann man 3 codes eingeben und bekommt zusätzliches feedback über Indicator über dem Keypad. Schließlich wird das Keypad erst interactable, wenn das erste Rätselt gelöst wurde.
         [Header("Events")]
         [SerializeField] private UnityEvent onAccessGranted;
         [SerializeField] private UnityEvent onAccessDenied;
@@ -19,7 +19,6 @@ namespace NavKeypad
         public UnityEvent OnAccessDenied => onAccessDenied;
 
         [Header("Settings")]
-        [SerializeField] private string accessGrantedText = "Granted";
         [SerializeField] private string accessDeniedText = "Denied";
         [SerializeField] private int[] codes = new int[3];
         private int currentStage = 0;
@@ -80,7 +79,7 @@ namespace NavKeypad
             }
         }
 
-        public void UnlockKeypad()
+        public void UnlockKeypad() //Wird vom EnergyPuzzleManager aufgerufen, wenn das erste Rätesel gelöst wurde
         {
             isLocked = false;
 
@@ -103,25 +102,23 @@ namespace NavKeypad
             }
         }
 
-
-        //Gets value from pressedbutton
-        public void AddInput(string input)
+        public void AddInput(string input) // Wird von KeypadButtons aufgerufen
         {
             if (isLocked)
                 return;
 
             audioSource.PlayOneShot(buttonClickedSfx);
 
-            if (displayingResult)
+            if (displayingResult) // Buttonpress geht nur durch, wenn kein Ergebenis angezeigt wird
                 return;
 
             switch (input)
             {
-                case "enter":
+                case "enter": // Für Enterbutton press wird überprüft, ob eingabe richtig ist
                     CheckCombo();
                     break;
                 default:
-                    if (currentInput != null && currentInput.Length == 4) // 9 max passcode size 
+                    if (currentInput != null && currentInput.Length == 4)
                     {
                         return;
                     }
@@ -152,7 +149,7 @@ namespace NavKeypad
             }
         }
 
-        private IEnumerator CorrectCodeRoutine()
+        private IEnumerator CorrectCodeRoutine() // Setzt aktuellen indicator grün, spielt sound ab, geht zum nächsten Rätsel (puzzleManager und HintManager) oder öffnet die Tür, wenn alle Rätsel gelöst
         {
             displayingResult = true;
 

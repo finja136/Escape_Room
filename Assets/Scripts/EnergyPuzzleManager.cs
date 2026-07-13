@@ -4,14 +4,13 @@ using NavKeypad;
 public class EnergyPuzzleManager : MonoBehaviour
 {
     [SerializeField] private EnergySlot[] slots;
-    [SerializeField] private DoorController door;
     [SerializeField] private Keypad keypad;
     [SerializeField] private HintSystemManager hintSystem;
 
     [ContextMenu("Force Solve Puzzle")]
-    public void ForceSolvePuzzle()
+    public void ForceSolvePuzzle() // Hilfsmethode zum Debuggen
     {
-        Debug.Log("PUZZLE FORCED COMPLETE");
+        Debug.Log("Puzzle 1 Force Solve");
         keypad.UnlockKeypad();
         hintSystem.UpdatePuzzleIndex();
 
@@ -19,8 +18,8 @@ public class EnergyPuzzleManager : MonoBehaviour
 
     public void CheckPuzzle()
     {
-        foreach (EnergySlot slot in slots)
-        {
+        foreach (EnergySlot slot in slots) //checkt für jeden Batterieslot, ob die richtige Batterie eingesetzt wurde
+        {                                  //dafür wird über den SocketInteractor das Objekt geholt, gepüft ob es eine EnergyCell ist und wenn ja ob die ID stimmt. Nur wenn für alle Slots die ID stimmt, gibt das foreach kein Return.
             var socket = slot.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactors.XRSocketInteractor>();
 
             if (socket.interactablesSelected.Count == 0)
@@ -38,7 +37,6 @@ public class EnergyPuzzleManager : MonoBehaviour
             if (cell.cellID != slot.requiredCellID)
                 return;
         }
-
         keypad.UnlockKeypad();
         hintSystem.UpdatePuzzleIndex();
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class HintSystemManager : MonoBehaviour
+public class HintSystemManager : MonoBehaviour // Kontrolliert die UI auf dem HintCanvas
 {
     [SerializeField] private TMP_Text HintText;
     [SerializeField] private TMP_Text ButtonText;
@@ -15,15 +15,15 @@ public class HintSystemManager : MonoBehaviour
 
     private int hintsUsed = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Welcher Hint angezeigt werden muss, wird über currentHintIndex und currentPuzzleIndex bestimmt. currentPuzzleIndex wird von den PuzzleManagern erhöht, currentHintIndex vom Button.
+    // Da es für jedes Rätsel 3 Hints gibt, wird currentPuzzleIndex um 3 erhöht, wenn ein Rätsel gelöst wurde, currentHintIndex wird auf 0 zurückgesetzt.
     void Start()
     {
         UpdateUI();
     }
 
-    public void OnHintButtonClicked()
+    public void OnHintButtonClicked() // Wenn der Button geklickt wird, wird der aktuelle HintIndex erhöht und die UI aktualisiert.  
     {
-        
         if (currentHintIndex < 3)
         {
             currentHintIndex++;

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadEscapeRoom()
+  public void LoadScene()
     {
         SceneManager.LoadScene("EscapeRoom1");
     }
