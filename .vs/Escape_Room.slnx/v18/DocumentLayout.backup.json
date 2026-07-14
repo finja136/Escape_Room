@@ -3,52 +3,64 @@
   "WorkspaceRootPath": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameEndManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ReactorCountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorLightPulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ReactorLightPulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\LightFlickerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FootstepsAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Keypad\\Scripts\\Keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FollowHeadUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HintSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameResults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\SceneLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SceneLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorPuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ReactorPuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameTimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameTimer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorLightPulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ReactorLightPulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ReactorCountdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Keypad\\Scripts\\Keypad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\LightFlickerManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\KeypadPuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\KeypadPuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Keypad\\Scripts\\KeypadButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BinaryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HintSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintMenuToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HintMenuToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameResults.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FootstepsAudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameEndManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FollowHeadUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\EnergyPuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,24 +71,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\DoorController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Keypad\\Scripts\\KeypadButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryEnterButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BinaryEnterButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BinaryButton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ScoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ScoreManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintMenuToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\HintMenuToggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,8 +82,99 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SceneLoader.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\SceneLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\SceneLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T16:10:53.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Keypad.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs",
+              "RelativeDocumentMoniker": "Assets\\Keypad\\Scripts\\Keypad.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs",
+              "RelativeToolTip": "Assets\\Keypad\\Scripts\\Keypad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T12:22:13.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KeypadButton.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Keypad\\Scripts\\KeypadButton.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs",
+              "RelativeToolTip": "Assets\\Keypad\\Scripts\\KeypadButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-25T15:48:54.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BinaryButton.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BinaryButton.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BinaryButton.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:48:35.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KeypadPuzzleManager.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\KeypadPuzzleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KeypadPuzzleManager.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\KeypadPuzzleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KeypadPuzzleManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T09:51:28.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LightFlickerManager.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LightFlickerManager.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LightFlickerManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T13:33:54.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReactorCountdown.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ReactorCountdown.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ReactorCountdown.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T12:07:52.626Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -96,7 +183,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\ReactorLightPulse.cs",
               "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorLightPulse.cs",
               "RelativeToolTip": "Assets\\Scripts\\ReactorLightPulse.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwEgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-10T13:42:45.876Z",
               "EditorCaption": ""
@@ -104,220 +191,132 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReactorCountdown.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ReactorCountdown.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorCountdown.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ReactorCountdown.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-12T12:07:52.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FootstepsAudio.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FootstepsAudio.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FootstepsAudio.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwD0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T12:25:24.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameEndManager.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameEndManager.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameEndManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:38:34.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FollowHeadUI.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowHeadUI.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FollowHeadUI.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAQwJEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T15:15:18.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Keypad.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs",
-              "RelativeDocumentMoniker": "Assets\\Keypad\\Scripts\\Keypad.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\Keypad.cs",
-              "RelativeToolTip": "Assets\\Keypad\\Scripts\\Keypad.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-25T12:22:13.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LightFlickerManager.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LightFlickerManager.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\LightFlickerManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LightFlickerManager.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwFAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T13:33:54.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ReactorPuzzleManager.cs",
               "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorPuzzleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ReactorPuzzleManager.cs",
               "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ReactorPuzzleManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ReactorPuzzleManager.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAAAPsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T09:15:41.751Z"
+              "WhenOpened": "2026-07-04T09:15:41.751Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HintSystemManager.cs",
               "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintSystemManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HintSystemManager.cs",
               "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintSystemManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\HintSystemManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T08:33:11.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GameResults.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameResults.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameResults.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T08:58:09.062Z"
+              "WhenOpened": "2026-07-08T08:33:11.631Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "GameTimer.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameTimer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameTimer.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameTimer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameTimer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T09:34:39.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EnergyPuzzleManager.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\EnergyPuzzleManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnergyPuzzleManager.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\EnergyPuzzleManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnergyPuzzleManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T19:40:43.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "KeypadPuzzleManager.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\KeypadPuzzleManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\KeypadPuzzleManager.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\KeypadPuzzleManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\KeypadPuzzleManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T09:51:28.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DoorController.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\DoorController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorController.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\DoorController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DoorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T14:37:38.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BinaryEnterButton.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryEnterButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BinaryEnterButton.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryEnterButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BinaryEnterButton.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:52:19.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "BinaryButton.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BinaryButton.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BinaryButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:48:35.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "KeypadButton.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Keypad\\Scripts\\KeypadButton.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Keypad\\Scripts\\KeypadButton.cs",
-              "RelativeToolTip": "Assets\\Keypad\\Scripts\\KeypadButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-25T15:48:54.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ScoreManager.cs",
-              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ScoreManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreManager.cs",
-              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\ScoreManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScoreManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T15:13:26.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "HintMenuToggle.cs",
               "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintMenuToggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HintMenuToggle.cs",
               "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\HintMenuToggle.cs",
               "RelativeToolTip": "Assets\\Scripts\\HintMenuToggle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T10:57:08.401Z"
+              "WhenOpened": "2026-07-10T10:57:08.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameResults.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameResults.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameResults.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameResults.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T08:58:09.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FootstepsAudio.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FootstepsAudio.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FootstepsAudio.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FootstepsAudio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T12:25:24.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GameEndManager.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameEndManager.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\GameEndManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameEndManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T13:07:57.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FollowHeadUI.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowHeadUI.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\FollowHeadUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FollowHeadUI.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAE8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T15:15:18.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EnergyPuzzleManager.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\EnergyPuzzleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EnergyPuzzleManager.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\EnergyPuzzleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EnergyPuzzleManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T19:40:43.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DoorController.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\DoorController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorController.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\DoorController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T14:37:38.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BinaryEnterButton.cs",
+              "DocumentMoniker": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryEnterButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BinaryEnterButton.cs",
+              "ToolTip": "D:\\Infokram\\Unity\\EscapeRoom\\Escape_Room\\Assets\\Scripts\\BinaryEnterButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BinaryEnterButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:52:19.548Z",
+              "EditorCaption": ""
             }
           ]
         }
