@@ -2050,6 +2050,10 @@ PrefabInstance:
       propertyPath: m_RayInteractor
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5033801203051696737, guid: 33f0ab0687fdf0a49a3ff7ca79aa78a8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5663893676086941514, guid: 33f0ab0687fdf0a49a3ff7ca79aa78a8, type: 3}
       propertyPath: m_RayInteractor
       value: 
